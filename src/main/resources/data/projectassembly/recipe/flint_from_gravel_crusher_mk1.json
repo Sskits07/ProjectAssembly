@@ -1,0 +1,7 @@
+{
+  "type": "projectassembly:crusher_mk1",
+  "ingredient": "minecraft:diamond",
+  "result": {
+    "id": "minecraft:diamond_block"
+  }
+}
