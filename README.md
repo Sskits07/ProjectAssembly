@@ -8,8 +8,7 @@ The goal of this project is to introduce new mechanics, systems, and features th
 🚧 Work in progress – expect frequent changes, incomplete features, and possible bugs.
 
 ## Contributing
-Since the mod is still in active development, contributions, suggestions, and feedback are welcome.  
-Feel free to open issues or pull requests to help shape the project.
+Since the mod is still in active development, contributions, suggestions, and feedback are welcome.
 
 ## License
-This project is licensed under [MIT License](https://en.wikipedia.org/wiki/MIT_License) (or update with your chosen license).
+This project is licensed under [MIT License](https://en.wikipedia.org/wiki/MIT_License) 
