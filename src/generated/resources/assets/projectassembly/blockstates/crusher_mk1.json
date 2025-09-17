@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "projectassembly:block/crusher_mk1" },
+    "facing=east":  { "model": "projectassembly:block/crusher_mk1", "y": 90 },
+    "facing=south": { "model": "projectassembly:block/crusher_mk1", "y": 180 },
+    "facing=west":  { "model": "projectassembly:block/crusher_mk1", "y": 270 }
+  }
+}
