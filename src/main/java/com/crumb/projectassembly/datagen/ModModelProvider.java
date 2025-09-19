@@ -6,17 +6,8 @@ import com.crumb.projectassembly.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
-import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TexturedModel;
-import net.minecraft.client.renderer.item.ClientItem;
-import net.minecraft.client.renderer.item.ConditionalItemModel;
-import net.minecraft.client.renderer.item.ItemModel;
-import net.minecraft.client.renderer.item.properties.conditional.HasComponent;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 
 public class ModModelProvider extends ModelProvider {
     public ModModelProvider(PackOutput output) {
@@ -25,6 +16,8 @@ public class ModModelProvider extends ModelProvider {
 
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+        itemModels.generateFlatItem(ModItems.IRON_CLUMP.get(), ModelTemplates.FLAT_ITEM);
+
         blockModels.createTrivialCube(ModBlocks.CRUSHER_MK1.get());
     }
 }

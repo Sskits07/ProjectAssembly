@@ -1,8 +1,10 @@
 package com.crumb.projectassembly.screen.custom;
 
+import com.crumb.projectassembly.ProjectAssembly;
 import com.crumb.projectassembly.block.ModBlocks;
 import com.crumb.projectassembly.block.entity.CrusherMK1BlockEntity;
 import com.crumb.projectassembly.screen.ModMenuTypes;
+import com.crumb.projectassembly.util.ModTags;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -30,8 +32,18 @@ public class CrusherMK1Menu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 54, 34));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 104, 34));
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 54, 34) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return stack.is(ModTags.Items.CRUSHABLE_ITEMS);
+            }
+        });
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 104, 34) {
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+        });
 
         addDataSlots(data);
     }
@@ -72,11 +84,12 @@ public class CrusherMK1Menu extends AbstractContainerMenu {
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSourceStack = sourceStack.copy();
 
+        ProjectAssembly.LOGGER.debug("Slot: " + pIndex);
+
         // Check if the slot clicked is one of the vanilla container slots
         if (pIndex < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
             // This is a vanilla container slot so merge the stack into the tile inventory
-            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX
-                    + TE_INVENTORY_SLOT_COUNT, false)) {
+            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX + 1, false)) {
                 return ItemStack.EMPTY;  // EMPTY_ITEM
             }
         } else if (pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {

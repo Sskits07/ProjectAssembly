@@ -1,4 +1,6 @@
-// 1.21.8	2025-09-17T15:56:41.3285749	Model Definitions - projectassembly
+// 1.21.8	2025-09-19T16:26:11.8620153	Model Definitions - projectassembly
 77af947815b374448148eff7576c03850bbc01bc assets/projectassembly/blockstates/crusher_mk1.json
 611e42f8d1b1eebaad9ad14c5548a8e53fc22a25 assets/projectassembly/items/crusher_mk1.json
+649460e617c0ff8b3701b961c9ae3dc4fa33c4e0 assets/projectassembly/items/iron_clump.json
 fce43657cfffd812409b563820c7a04b97723f25 assets/projectassembly/models/block/crusher_mk1.json
+ee8793f433c2934e59ad714e0c3e33746cf38503 assets/projectassembly/models/item/iron_clump.json

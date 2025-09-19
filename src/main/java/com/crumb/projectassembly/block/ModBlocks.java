@@ -19,7 +19,7 @@ public class ModBlocks {
             DeferredRegister.createBlocks(ProjectAssembly.MOD_ID);
 
     public static final DeferredBlock<Block> CRUSHER_MK1 = registerBlock("crusher_mk1",
-            (properties) -> new CrusherMK1Block(properties.noOcclusion()));
+            (properties) -> new CrusherMK1Block(properties.strength(5f).requiresCorrectToolForDrops().noOcclusion()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {

@@ -1,1 +1,3 @@
-// 1.21.8	2025-09-17T13:34:40.4906323	Tags for minecraft:block mod id projectassembly
+// 1.21.8	2025-09-18T19:41:04.7796925	Tags for minecraft:block mod id projectassembly
+899bd02687a2c4625fc1329638b1aa0eefb080e3 data/minecraft/tags/block/mineable/pickaxe.json
+899bd02687a2c4625fc1329638b1aa0eefb080e3 data/minecraft/tags/block/needs_iron_tool.json

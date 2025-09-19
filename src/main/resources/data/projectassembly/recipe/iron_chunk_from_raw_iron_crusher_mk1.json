@@ -1,0 +1,8 @@
+{
+  "type": "projectassembly:crusher_mk1",
+  "ingredient": "minecraft:raw_iron",
+  "result": {
+    "id": "projectassembly:iron_clump",
+    "count": 2
+  }
+}

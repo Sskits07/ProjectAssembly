@@ -1,1 +1,3 @@
-// 1.21.8	2025-09-17T13:34:40.4916324	Tags for minecraft:item mod id projectassembly
+// 1.21.8	2025-09-19T16:26:11.8620153	Tags for minecraft:item mod id projectassembly
+787ddcc30ef76630ed9797b5e2f38a397dbac58a data/projectassembly/tags/item/crushable_items.json
+7291deeadb60afc0fd35da081e10b20b77dd8ba4 data/projectassembly/tags/item/grindable_items.json
